@@ -1,24 +1,20 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {getQuizDetail} from './services/service_api'
 
 function App() {
+  
+  const [Question, setQuestion] = useState([])
+
+  useEffect(() => {
+    getQuizDetail(5,"easy")
+    setQuestion(1)
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{Question}</h1>
     </div>
   );
 }
