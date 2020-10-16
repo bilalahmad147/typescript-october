@@ -1,5 +1,4 @@
 import React,{useEffect,useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {getQuizDetail} from './services/service_api'
 
@@ -9,7 +8,6 @@ function App() {
 
   useEffect(() => {
     getQuizDetail(5,"easy")
-    setQuestion(1)
   }, [])
 
   return (
