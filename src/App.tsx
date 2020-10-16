@@ -14,7 +14,10 @@ function App() {
 
   return (
     <div className="App">
-      <Question_card />
+      <Question_card
+        question={question.question}
+        option={question.answer}
+      />
     </div>
   );
 }
