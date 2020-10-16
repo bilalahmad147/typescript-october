@@ -1,18 +1,20 @@
-import React,{useEffect,useState} from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
-import {getQuizDetail} from './services/service_api'
+import Question_card from './components/question_card';
+import { getQuizDetail } from './services/service_api'
 
 function App() {
-  
-  const [Question, setQuestion] = useState([])
 
   useEffect(() => {
-    getQuizDetail(5,"easy")
+    async function quizDetail() {
+      const question = await getQuizDetail(5, 'easy')
+    }
+    quizDetail();
   }, [])
 
   return (
     <div className="App">
-      <h1>{Question}</h1>
+      <Question_card />
     </div>
   );
 }
