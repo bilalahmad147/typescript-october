@@ -3,12 +3,7 @@ import React from 'react'
 function Question_card() {
     return (
         <div>
-            <h2>{question}</h2>
-            <div>
-                {
-                    
-                }
-            </div>
+            <h1>hello world</h1>
         </div>
     )
 }
